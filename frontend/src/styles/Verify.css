@@ -1,0 +1,268 @@
+.verify-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.verify-card {
+    width: 420px;
+    padding: 40px;
+    border-radius: 14px;
+    background: rgba(17, 8, 8, 0.12);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+.verify-card h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.verify-card p {
+    margin-top: 10px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* Verification Form */
+.verify-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.verify-input {
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.verify-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.verify-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.verify-input:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.code-input {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+/* Verification Button */
+.verify-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #35214a;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.verify-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #f3f3f3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.verify-button:active {
+    transform: translateY(0);
+}
+
+.verify-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Resend Code Section */
+.resend-section {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.resend-text {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+
+.resend-button {
+    padding: 10px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: transparent;
+    color: black;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.resend-button:hover:not(:disabled) {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.resend-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Back to Register Link */
+.back-link {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 13px;
+    transition: color 0.3s ease;
+    padding: 0;
+}
+
+.link-button:hover {
+    color: white;
+}
+
+/* Success & Error Icons */
+.success-icon,
+.error-icon {
+    font-size: 48px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.success-icon {
+    background: #4caf50;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.error-icon {
+    background: #e74c3c;
+    animation: shake 0.5s ease-out;
+}
+
+/* Retry Button */
+.retry-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #764ba2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    background: #f3f3f3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Redirect Text */
+.redirect-text {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 12px;
+}
+
+/* Spinner */
+.spinner {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .verify-card {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .verify-input {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .code-input {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+}
