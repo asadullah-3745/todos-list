@@ -83,7 +83,6 @@ const User = db.User;
       throw error;
     }
 
-    // Check if code matches
     if (user.verificationCode !== code) {
       const error = new Error("Invalid verification code");
       error.statusCode = 400;
